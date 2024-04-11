@@ -1,7 +1,10 @@
+import java.util.Random;
 public class Main {
     public static void main(String[] args) {
+
         int[] a = {1, 2, 3, 4, 5};
         System.out.println(a.length);
+        System.out.println(a[1]);
 
         int[] b = new int[6];
         b[0] = 7;
@@ -24,6 +27,22 @@ public class Main {
             e[i] = i + 1;
             System.out.println(e[i]);
         }
+
+        int[] f = new int[10];
+        for (int i = 0; i < f.length; i++) {
+            f[i] = i + 1;
+            System.out.println(f[i]);
+        }
+
+        Random h = new Random();
+        System.out.println (h.nextInt(101));
+        int[] g=new int[20];
+        for (int i = 0; i < g.length ; i++) {
+            g[i] = h.nextInt(100);
+            System.out.println(g[i]);
+        }
+
+
 
     }
 }
