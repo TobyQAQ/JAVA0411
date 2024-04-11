@@ -1,4 +1,6 @@
 import java.util.Random;
+import java.util.concurrent.CountDownLatch;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -35,14 +37,21 @@ public class Main {
         }
 
         Random h = new Random();
-        System.out.println (h.nextInt(101));
-        int[] g=new int[20];
-        for (int i = 0; i < g.length ; i++) {
-            g[i] = h.nextInt(100);
+        System.out.println(h.nextInt(101));
+        int[] g = new int[5];
+        for (int i = 0; i < g.length; i++) {
+            g[i] = h.nextInt(10);
             System.out.println(g[i]);
         }
 
 
-
+        int search = 3;
+        int found = 0;
+        for (int i = 0; i < g.length; i++) {
+            if (g[i] == search) {
+                found ++;
+            }
+        }
+        System.out.println(found);
     }
 }
